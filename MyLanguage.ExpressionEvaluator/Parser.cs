@@ -169,10 +169,11 @@ namespace MyLanguage.ExpressionEvaluator
                 var op = (Func<object, object, object>?)_tokeniser.operatorTable[depth][_tokeniser.Token];
                 if (op == null)
                 {
-                    if ((_tokeniser.operatorTable[depth] as BinaryHashtable).NullOperator == null || _tokeniser.Token >= (int)DefaultToken.CloseParens || _tokeniser.Token <= (int)DefaultToken.OpenParens)
+                    var nullOp = ((BinaryHashtable)_tokeniser.operatorTable[depth]).NullOperator;
+                    if (nullOp == null || _tokeniser.Token >= (int)DefaultToken.CloseParens || _tokeniser.Token <= (int)DefaultToken.OpenParens)
                         return lhs;
                     else
-                        op = (_tokeniser.operatorTable[depth] as BinaryHashtable).NullOperator;
+                        op = nullOp;
                 }
                 else _tokeniser.NextToken();
 
@@ -188,10 +189,11 @@ namespace MyLanguage.ExpressionEvaluator
             var op = (Func<object, object, object>?)_tokeniser.operatorTable[depth][_tokeniser.Token];
             if (op == null)
             {
-                if ((_tokeniser.operatorTable[depth] as BinaryHashtable).NullOperator == null || _tokeniser.Token >= (int)DefaultToken.CloseParens || _tokeniser.Token <= (int)DefaultToken.OpenParens)
+                var nullOp = ((BinaryHashtable)_tokeniser.operatorTable[depth]).NullOperator;
+                if (nullOp == null || _tokeniser.Token >= (int)DefaultToken.CloseParens || _tokeniser.Token <= (int)DefaultToken.OpenParens)
                     return lhs;
                 else
-                    op = (_tokeniser.operatorTable[depth] as BinaryHashtable).NullOperator;
+                    op = nullOp;
             }
             else _tokeniser.NextToken();
 
@@ -206,10 +208,11 @@ namespace MyLanguage.ExpressionEvaluator
             var op = (Func<object, object, object>?)_tokeniser.operatorTable[depth][_tokeniser.Token];
             if (op == null)
             {
-                if ((_tokeniser.operatorTable[depth] as BinaryHashtable).NullOperator == null || _tokeniser.Token >= (int)DefaultToken.CloseParens || _tokeniser.Token <= (int)DefaultToken.OpenParens)
+                var nullOp = ((BinaryHashtable)_tokeniser.operatorTable[depth]).NullOperator;
+                if (nullOp == null || _tokeniser.Token >= (int)DefaultToken.CloseParens || _tokeniser.Token <= (int)DefaultToken.OpenParens)
                     return lhs;
                 else
-                    op = (_tokeniser.operatorTable[depth] as BinaryHashtable).NullOperator;
+                    op = nullOp;
             }
             else _tokeniser.NextToken();
 

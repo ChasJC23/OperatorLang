@@ -16,6 +16,7 @@ namespace MyLanguage.ExpressionEvaluator
         {
             this.reader = reader;
             this.operatorTable = operatorTable;
+            this.Identifier = "";
             NextChar();
             NextToken();
         }

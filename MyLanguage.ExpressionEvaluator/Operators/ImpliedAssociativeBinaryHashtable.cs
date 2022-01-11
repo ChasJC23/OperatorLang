@@ -12,13 +12,13 @@ namespace MyLanguage.ExpressionEvaluator.Operators
         public readonly bool rightAssociative;
         public ImpliedAssociativeBinaryHashtable(Func<O, O, O> impliedOperation, bool rightAssociative) : base()
         {
-            SetImpliedOperation(impliedOperation);
+            this.ImpliedOperation = (object a, object b) => impliedOperation((O)a, (O)b) as object;
             this.rightAssociative = rightAssociative;
         }
         public Func<object, object, object> ImpliedOperation { get; private set; }
         public void SetImpliedOperation(Func<O, O, O> impliedOperation)
         {
-            this.ImpliedOperation = (object a, object b) => impliedOperation((O)a, (O)b) as object;
+            ImpliedOperation = (object a, object b) => impliedOperation((O)a, (O)b) as object;
         }
         public void Add(int key, Func<I, I, O> value)
         {
