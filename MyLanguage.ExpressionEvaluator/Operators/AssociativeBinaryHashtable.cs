@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace MyLanguage.ExpressionEvaluator.Operators
 {
+    /* Binary operator priority level which only conerns a single type,
+     * and therefore can support some form of associativity.
+     */
     internal class AssociativeBinaryHashtable<T> : BinaryHashtable
     {
         public readonly bool rightAssociative;

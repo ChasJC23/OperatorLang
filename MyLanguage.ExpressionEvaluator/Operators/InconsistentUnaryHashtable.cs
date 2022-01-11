@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace MyLanguage.ExpressionEvaluator.Operators
 {
+    /* Unary operator priority level for differing input and output types.
+     * Multiple operators of differing types can be on the same level,
+     * yet lack of associativity means only one operation on this level
+     * will be successfully parsed on a given branch.
+     */
     internal class InconsistentUnaryHashtable : Hashtable
     {
         public readonly bool postfix;

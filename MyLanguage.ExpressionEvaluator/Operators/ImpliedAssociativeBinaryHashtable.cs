@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace MyLanguage.ExpressionEvaluator.Operators
 {
+    /* Binary operator priority for less ordinary operators which imply some other operation when repeated.
+     * For example, 2 < 5 < 8 implies 2 < 5 ∧ 5 < 8.
+     * Can support multiple different operators,
+     * which can lead to some unusual behaviour.
+     * Should probably be used for transitive relations.
+     */
     internal class ImpliedAssociativeBinaryHashtable<I, O> : Hashtable
     {
         public readonly bool rightAssociative;

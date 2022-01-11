@@ -38,7 +38,7 @@ namespace MyLanguage.ExpressionEvaluator
             standard.AddConsistentUnaryCategory<float>(false);
             standard.AddConsistentUnaryOperator<float>("+", (a) => +a);
             standard.AddConsistentUnaryOperator<float>("-", (a) => -a);
-            var expression = "1.0 < 2.0 < 3.0 < 4.0";
+            var expression = "'A'";
             var result = Parser.Parse(expression, standard);
             Console.WriteLine(result.Eval(new BaseContext()));
         }

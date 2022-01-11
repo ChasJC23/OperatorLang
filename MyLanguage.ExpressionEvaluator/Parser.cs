@@ -53,11 +53,18 @@ namespace MyLanguage.ExpressionEvaluator
             Hashtable operatorCategory = _tokeniser.operatorTable[depth];
             switch (operatorCategory)
             {
+                /* a new approach for doing this is truly needed...
+                 * the type arguments may be removed;
+                 * their purpose has essentially reduced to defensive programming
+                 * which may be unnecessary in the final translator
+                 */
                 case ConsistentUnaryHashtable<float> unaryHashtable:
                     return Helper(unaryHashtable, depth);
                 case ConsistentUnaryHashtable<int> unaryHashtable:
                     return Helper(unaryHashtable, depth);
                 case ConsistentUnaryHashtable<bool> unaryHashtable:
+                    return Helper(unaryHashtable, depth);
+                case ConsistentUnaryHashtable<char> unaryHashtable:
                     return Helper(unaryHashtable, depth);
 
                 case InconsistentUnaryHashtable unaryHashtable:
@@ -72,11 +79,17 @@ namespace MyLanguage.ExpressionEvaluator
                     return Helper(binaryHashtable, depth);
                 case AssociativeBinaryHashtable<bool> binaryHashtable:
                     return Helper(binaryHashtable, depth);
+                case AssociativeBinaryHashtable<char> binaryHashtable:
+                    return Helper(binaryHashtable, depth);
 
+                /* come on, this one has two type arguments;
+                 * so to include all options before user defined types,
+                 * the number of redundant cases will need to go up with the square of supported types
+                 */
                 case ImpliedAssociativeBinaryHashtable<float, bool> binaryHashtable:
                     return Helper(binaryHashtable, depth);
 
-                case InconsistentBinaryHashtable _:
+                case InconsistentBinaryHashtable:
                     return ParseNonAssociativeBinary(depth);
 
                 default:
@@ -287,6 +300,10 @@ namespace MyLanguage.ExpressionEvaluator
                     return node;
                 case (int)DefaultToken.FloatLiteral:
                     node = new LiteralNode(_tokeniser.FloatLiteral);
+                    _tokeniser.NextToken();
+                    return node;
+                case (int)DefaultToken.CharLiteral:
+                    node = new LiteralNode(_tokeniser.CharLiteral);
                     _tokeniser.NextToken();
                     return node;
                 case (int)DefaultToken.OpenParens:

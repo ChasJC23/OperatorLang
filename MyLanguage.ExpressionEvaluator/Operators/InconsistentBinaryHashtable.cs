@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace MyLanguage.ExpressionEvaluator.Operators
 {
+    /* Binary operator priority for differing types.
+     * Will be more useful for derived types such as matrices.
+     * Multiple operators of differing types can be on the same level,
+     * yet lack of associativity means only one operation on this level
+     * will be successfully parsed on a given branch.
+     */
     internal class InconsistentBinaryHashtable : BinaryHashtable
     {
         public InconsistentBinaryHashtable() : base()

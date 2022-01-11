@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace MyLanguage.ExpressionEvaluator.Operators
 {
+    /* Base class which represents priority level for vast majority of binary operators.
+     * Includes a null operator which is used when two arguments are left adjacent in an expression.
+     * eg. 3x = 3 * x.
+     */
     internal class BinaryHashtable : Hashtable
     {
         public BinaryHashtable() : base()
