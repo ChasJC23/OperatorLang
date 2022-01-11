@@ -126,9 +126,15 @@ namespace MyLanguage.ExpressionEvaluator
 
             Node rhs = ParseImpliedRightAssociativeBinary<I, O>(depth);
 
-            if (rhs is BinaryNode binaryRight && (((ImpliedAssociativeBinaryHashtable<I, O>)_tokeniser.operatorTable[depth]).ImpliedOperation == binaryRight.op || _tokeniser.operatorTable[depth].Contains(binaryRight.op)))
+            if (rhs is BinaryNode binaryRight)
             {
                 var impliedOperation = ((ImpliedAssociativeBinaryHashtable<I, O>)_tokeniser.operatorTable[depth]).ImpliedOperation;
+                // to make sure we don't accidentally misinterpret an operator with a different priority,
+                // we check that the operator of rhs is actually in the priority we care about.
+                if (
+                    binaryRight.op == impliedOperation ||
+                    _tokeniser.operatorTable[depth].ContainsValue(binaryRight.op)
+                    )
                 /*
                  *       &
                  *      / \
@@ -152,7 +158,7 @@ namespace MyLanguage.ExpressionEvaluator
              *  / \
              * a   b
              */
-            else return new BinaryNode(lhs, rhs, op);
+            return new BinaryNode(lhs, rhs, op);
         }
         private Node ParseLeftAssociativeBinary(int depth)
         {
