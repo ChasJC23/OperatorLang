@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLanguage.ExpressionEvaluator.Nodes
+namespace MyLanguage.ExpressionEvaluator_POC.Nodes
 {
     internal class VariableNode : Node
     {

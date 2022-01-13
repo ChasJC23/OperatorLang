@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLanguage.ExpressionEvaluator.Operators
+namespace MyLanguage.ExpressionEvaluator_POC.Operators
 {
     /* Unary operator priority level for differing input and output types.
      * Multiple operators of differing types can be on the same level,

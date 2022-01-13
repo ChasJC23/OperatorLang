@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLanguage.ExpressionEvaluator", "MyLanguage.ExpressionEvaluator\MyLanguage.ExpressionEvaluator.csproj", "{B68977C1-1C9B-474F-A299-D6FDE49819C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLanguage.ExpressionEvaluator_POC", "MyLanguage.ExpressionEvaluator\MyLanguage.ExpressionEvaluator_POC.csproj", "{B68977C1-1C9B-474F-A299-D6FDE49819C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

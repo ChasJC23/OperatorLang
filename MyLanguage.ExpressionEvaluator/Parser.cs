@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyLanguage.ExpressionEvaluator.Nodes;
-using MyLanguage.ExpressionEvaluator.Operators;
+using MyLanguage.ExpressionEvaluator_POC.Nodes;
+using MyLanguage.ExpressionEvaluator_POC.Operators;
 
-namespace MyLanguage.ExpressionEvaluator
+namespace MyLanguage.ExpressionEvaluator_POC
 {
     internal class Parser
     {

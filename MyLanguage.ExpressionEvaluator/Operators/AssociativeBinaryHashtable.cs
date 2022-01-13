@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLanguage.ExpressionEvaluator.Operators
+namespace MyLanguage.ExpressionEvaluator_POC.Operators
 {
     /* Binary operator priority level which only conerns a single type,
      * and therefore can support some form of associativity.

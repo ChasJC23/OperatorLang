@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLanguage.ExpressionEvaluator.Operators
+namespace MyLanguage.ExpressionEvaluator_POC.Operators
 {
     /* Binary operator priority for differing types.
      * Will be more useful for derived types such as matrices.

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLanguage.ExpressionEvaluator.Operators
+namespace MyLanguage.ExpressionEvaluator_POC.Operators
 {
     /* Base class which represents priority level for vast majority of binary operators.
      * Includes a null operator which is used when two arguments are left adjacent in an expression.

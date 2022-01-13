@@ -1,7 +1,7 @@
-﻿using MyLanguage.ExpressionEvaluator.Nodes;
-using MyLanguage.ExpressionEvaluator.Operators;
+﻿using MyLanguage.ExpressionEvaluator_POC.Nodes;
+using MyLanguage.ExpressionEvaluator_POC.Operators;
 
-namespace MyLanguage.ExpressionEvaluator
+namespace MyLanguage.ExpressionEvaluator_POC
 {
     static class Program
     {

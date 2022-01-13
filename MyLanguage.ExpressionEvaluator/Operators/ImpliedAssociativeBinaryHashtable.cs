@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyLanguage.ExpressionEvaluator.Operators
+namespace MyLanguage.ExpressionEvaluator_POC.Operators
 {
     /* Binary operator priority for less ordinary operators which imply some other operation when repeated.
      * For example, 2 < 5 < 8 implies 2 < 5 ∧ 5 < 8.
