@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLanguage.ExpressionEvaluator_POC", "MyLanguage.ExpressionEvaluator\MyLanguage.ExpressionEvaluator_POC.csproj", "{B68977C1-1C9B-474F-A299-D6FDE49819C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLanguage.Compiler", "MyLanguage.Compiler\MyLanguage.Compiler.csproj", "{211520B6-7588-49F5-885D-01D16660DF11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B68977C1-1C9B-474F-A299-D6FDE49819C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B68977C1-1C9B-474F-A299-D6FDE49819C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B68977C1-1C9B-474F-A299-D6FDE49819C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211520B6-7588-49F5-885D-01D16660DF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211520B6-7588-49F5-885D-01D16660DF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211520B6-7588-49F5-885D-01D16660DF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211520B6-7588-49F5-885D-01D16660DF11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
